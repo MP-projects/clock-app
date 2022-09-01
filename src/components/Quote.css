@@ -1,0 +1,31 @@
+.clock__quote{
+    flex-basis: 40%;
+    width: 575px;
+
+  }
+
+  .clock__quote-wrapper {
+    display: flex;
+  }
+  .clock__quote-text{
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    max-width: 540px;
+    padding-right: 15px;
+
+  }
+  .clock__quote-author{
+    display: block;
+    padding-top: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+  }
+  .clock__quote-refresh {
+    width: 20px;
+
+
+  }
+  .clock__quote-refresh-img{
+    width: 100%;
+  }

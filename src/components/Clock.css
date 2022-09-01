@@ -1,0 +1,69 @@
+.clock__time-wrapper{
+    flex-basis: 60%;
+    display: flex;
+    width: 1110px;
+    flex-direction: column;
+    justify-content: flex-end;
+
+  }
+  .clock__time-welcome{
+    font-size: 3rem;
+    width: 800px;
+
+  }
+  .clock__time{
+    font-size: 20rem;
+
+  }
+
+  .clock__time-span{
+    font-size: 4rem;
+
+  }
+
+  .clock__time-city{
+    font-size: 2.4rem;
+
+  }
+  .clock__time-wrapper2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .clock__button-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  
+  }
+  
+  .clock__button{
+  height: 5.6rem;
+  width: 14.6rem;
+  background-color: white;
+  border-radius: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+  }
+  .clock__button-text{
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    opacity: 0.5;
+    color: black;
+  }
+
+  .clock__button-img-wrapper{
+    width: 40px;
+    height: 40px;
+    background-color: #303030;
+    border-radius: 50%;
+    margin-left: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .clock__button-img{
+  width: auto;
+  }

@@ -26,10 +26,10 @@ export default function Clock({ clicked, handleIsClicked, handleIsMorning }) {
 
   const changeGreetings = (word) => {
     setGreetings(word);
-    if (word === "Good Morning") {
+    if (word === "Good Morning" || "Good Afternoon") {
       setIsMorning(true);
       handleIsMorning(true);
-    } else if (word === "Good Afternoon" || "Good Evening") {
+    } else if (word === "Good Evening") {
       setIsMorning(false);
       handleIsMorning(false);
     }

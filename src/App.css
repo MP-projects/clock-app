@@ -49,16 +49,34 @@ button{
   width: 1440px;
   height: 800px;
   position: absolute;
-  
   filter: brightness(50%);
   z-index: -1;
   transition: 0.2s;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  
+ 
 }
-.clock__background--day{
+.clock__background--day-desktop{
   background-image: url(../src/assets/desktop/bg-image-daytime.jpg);
 }
-.clock__background--night{
+.clock__background--night-desktop{
   background-image: url(../src/assets/desktop/bg-image-nighttime.jpg);
+  
+}
+.clock__background--day-tablet{
+  background-image: url(../src/assets/tablet/bg-image-daytime.jpg);
+}
+.clock__background--night-tablet{
+  background-image: url(../src/assets/tablet/bg-image-nighttime.jpg);
+  
+}
+.clock__background--day-mobile{
+  background-image: url(../src/assets/mobile/bg-image-daytime.jpg);
+}
+.clock__background--night-mobile{
+  background-image: url(../src/assets/mobile/bg-image-nighttime.jpg);
   
 }
 
@@ -70,14 +88,17 @@ button{
   flex-shrink: 0;
   transform: translate(0,0);
   transition: 0.2s;
+
 }
 
 .move {
-  transform: translate(0, -350px);
+  transform: translate(0, -400px);
 }
- .height {
-  height: 450px;
- }
+.move--padding {
+  transform: translate(0, -400px);
+  padding-bottom : 30px;
+}
+
 @media(max-width : 1439px){
   html{
     font-size: 8px;
@@ -99,15 +120,17 @@ button{
   }
   
   .move {
-    transform: translate(0, -300px);
+    transform: translate(0, -350px);
   }
-  .height {
-    height: 400px;
-   }
+  .move--padding{
+    transform: translate(0, -350px);
+    padding-bottom: 30px;
+
+  }
 }
 @media(max-width : 1199px){
   html{
-    font-size: 8px;
+    font-size: 7px;
   }
   .clock {
     width: 1024px;
@@ -117,7 +140,7 @@ button{
   .clock__background{
     width: 1024px;
     height: 600px;
-
+    
   }
   
   .clock__wrapper {
@@ -126,9 +149,109 @@ button{
   }
   
   .move {
-    transform: translate(0, -225px);
+    transform: translate(0, -300px);
   }
-  .height {
-    height: 375px;
-   }
+  .move--padding{
+    transform: translate(0, -300px);
+    padding-bottom: 20px;
+
+  }
+
+}
+
+@media(max-width : 1023px){
+  html{
+    font-size: 10px;
+  }
+  .clock {
+    width: 820px;
+    height: 1024px;
+  
+  }
+  .clock__background{
+    width: 820px;
+    height: 1024px;
+
+  }
+  
+  
+  .clock__wrapper {
+    height: 1024px;
+    padding: 75px 80px 75px;
+  }
+  
+  .move {
+    transform: translate(0, -440px);
+  }
+  .move--padding{
+    transform: translate(0, -440px);
+    padding-bottom: 40px;
+
+  }
+}
+
+@media(max-width : 819px){
+  .clock {
+    width: 768px;
+  
+  }
+  .clock__background{
+    width: 768px;
+
+  }
+  
+  .clock__wrapper {
+    height: 1024px;
+    padding: 75px 80px 75px;
+  }
+  
+}
+
+@media(max-width : 599px){
+  .clock {
+    width: 540px;
+    height: 720px;
+  
+  }
+  .clock__background{
+    width: 540px;
+    height: 720px;
+  }
+  
+  .clock__wrapper {
+    height: 720px;
+    padding: 75px 80px 75px;
+  }
+  .move {
+    transform: translate(0, -300px);
+  }
+  .move--padding{
+    transform: translate(0, -300px);
+    padding-bottom: 80px;
+
+  }
+}
+@media(max-width : 459px){
+
+  .clock {
+    width: 375px;
+    height: 667px;
+  
+  }
+  .clock__background{
+    width: 375px;
+    height: 667px;
+  }
+  
+  .clock__wrapper {
+    height: 667px;
+    padding: 20px 30px 60px;
+  }
+  .move {
+    transform: translate(0, -256px);
+  }
+  .move--padding{
+    transform: translate(0, -256px);
+
+  }
 }

@@ -2,12 +2,14 @@ import React from "react";
 import { useFetch } from "../hooks/useFetch";
 import "./DetailBar.css";
 
-export default function DetailBar({ isClicked }) {
+export default function DetailBar({ isClicked, isMorning }) {
   const { data: detail } = useFetch("http://worldtimeapi.org/api/ip");
 
   return (
     <div
-      className={`detailBar ${isClicked ? "move" : null}`}>
+      className={`detailBar 
+      ${isMorning ? "detailBar--day" : "detailBar--night"}  
+      ${isClicked ? "move" : null}`}>
       <div className="detailBar__wrapper">
         <aside className="detailBar__aside  detailBar__aside-left">
           <div className="detailBar__row">

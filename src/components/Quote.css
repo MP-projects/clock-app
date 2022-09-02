@@ -8,7 +8,7 @@
     display: flex;
   }
   .clock__quote-text{
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 2.8rem;
     max-width: 540px;
     padding-right: 15px;
@@ -17,7 +17,7 @@
   .clock__quote-author{
     display: block;
     padding-top: 20px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 2.8rem;
   }
@@ -29,3 +29,45 @@
   .clock__quote-refresh-img{
     width: 100%;
   }
+  @media(max-width : 599px){
+    .clock__quote{
+      width: 100%;
+  
+    }
+
+    .clock__quote-text{
+      font-size: 1.4rem;
+      max-width: 340px;
+  
+    }
+    .clock__quote-author{
+      font-size: 1.4rem;
+    }
+    .clock__quote-refresh {
+      width: 20px;
+  
+    }
+    .clock__quote-refresh-img{
+      width: 100%;
+
+  }
+}
+@media(max-width : 459px){
+
+  .clock__quote-text{
+    font-size: 1.2rem;
+    max-width: 300px;
+    padding-right: 10px;
+  }
+  .clock__quote-author{
+    font-size: 1.2rem;
+  }
+  .clock__quote-refresh {
+    width: 15px;
+
+  }
+  .clock__quote-refresh-img{
+    width: 100%;
+
+}
+}

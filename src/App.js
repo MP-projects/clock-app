@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Clock from "../src/components/Clock";
 import Quote from "../src/components/Quote";
 import DetailBar from "../src/components/DetailBar";
+import { useMediaPredicate } from "react-media-hook";
 import "./App.css";
 
 export default function App() {
@@ -16,10 +17,40 @@ export default function App() {
     setIsMorning(isMorning);
   };
 
+// change background depend on media
+  
+  const media1023 = useMediaPredicate("(max-width: 1023px)");
+  const media639 = useMediaPredicate("(max-width: 376px)");
+
+  const backgroundDesktop = isMorning
+    ? "clock__background--day-desktop"
+    : "clock__background--night-desktop";
+  const backgroundMobile = isMorning
+    ? "clock__background--day-mobile"
+    : "clock__background--night-mobile";
+
+  const backgroundTablet = isMorning
+    ? "clock__background--day-tablet"
+    : "clock__background--night-tablet";
+  
+  const changeBackground = () => {
+    if (media1023) {
+      if (media639) {
+        return (backgroundMobile);
+      }
+      return (backgroundTablet);
+    } else {
+      return (backgroundDesktop);
+    }
+  }
+
+
   return (
     <div className="clock">
-      <div className={`clock__background ${ isClicked ? "height" : null } ${isMorning ? "clock__background--day" : "clock__background--night" }`}></div>
-      <div className={`clock__wrapper ${isClicked ? "move" : null}`}>
+      <div
+        className={`clock__background  
+        ${changeBackground()}`}></div>
+      <div className={`clock__wrapper ${isClicked ? "move--padding" : null}`}>
         <Quote />
         <Clock
           clicked={isClicked}
@@ -27,7 +58,7 @@ export default function App() {
           handleIsMorning={handleIsMorning}
         />
       </div>
-      <DetailBar isClicked={isClicked} />
+      <DetailBar isClicked={isClicked} isMorning={isMorning} />
     </div>
   );
 }

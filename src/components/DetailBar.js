@@ -3,7 +3,7 @@ import { useFetch } from "../hooks/useFetch";
 import "./DetailBar.css";
 
 export default function DetailBar({ isClicked, isMorning }) {
-  const { data: detail } = useFetch("http://worldtimeapi.org/api/ip");
+  const { data: detail } = useFetch("https://worldtimeapi.org/api/ip");
 
   return (
     <div

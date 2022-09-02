@@ -3,7 +3,7 @@ import { useFetchTime } from "../hooks/useFetchTime";
 import "./Time.css";
 
 export default function Time({ changeGreetings }) {
-  const { data: time } = useFetchTime("http://worldtimeapi.org/api/ip");
+  const { data: time } = useFetchTime("https://worldtimeapi.org/api/ip");
 
   let finalHours;
   let finalMinutes;

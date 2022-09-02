@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useFetch } from "../hooks/useFetch.js";
 import Time from "./Time";
 import "./Clock.css";
+import sun from "../assets/desktop/icon-sun.svg";
+import moon from "../assets/desktop/icon-moon.svg";
 
 //images
 import arrowUp from "../assets/desktop/icon-arrow-up.svg";
 import arrowDown from "../assets/desktop/icon-arrow-down.svg";
 
-export default function Clock({clicked, handleIsClicked}) {
+export default function Clock({ clicked, handleIsClicked, handleIsMorning }) {
   const { data: timezone } = useFetch("https://ipwho.is");
   let abbr;
   let city;
@@ -19,24 +21,37 @@ export default function Clock({clicked, handleIsClicked}) {
     country = timezone.country;
   }
 
-  const [greetings, setGreetings] = useState("");
+  const [greetings, setGreetings] = useState("Good Morning");
+  const [isMorning, setIsMorning] = useState(true);
 
   const changeGreetings = (word) => {
     setGreetings(word);
+    if (word === "Good Morning") {
+      setIsMorning(true);
+      handleIsMorning(true);
+    } else if (word === "Good Afternoon" || "Good Evening") {
+      setIsMorning(false);
+      handleIsMorning(false);
+    }
   };
+
   const [isClicked, setIsClicked] = useState(clicked);
   const handleClick = () => {
     setIsClicked((prevState) => !prevState);
   };
 
-  useEffect(()=> {
-    handleIsClicked(isClicked)
-  },[isClicked, handleIsClicked])
-
+  useEffect(() => {
+    handleIsClicked(isClicked);
+  }, [isClicked, handleIsClicked]);
 
   return (
     <div className="clock__time-wrapper">
       <p className="clock__time-welcome">
+        <img
+          className="clock__time-sun-moon"
+          src={isMorning ? sun : moon}
+          alt={isMorning ? "sun" : "moon"}
+        />{" "}
         {greetings && greetings}, it's currently
       </p>
       <div className="clock__time">
@@ -51,11 +66,17 @@ export default function Clock({clicked, handleIsClicked}) {
           <button className="clock__button" onClick={handleClick}>
             <p className="clock__button-text">{isClicked ? "less" : "more"}</p>
             <div className="clock__button-img-wrapper">
-              <img
-                src={!isClicked ? arrowUp : arrowDown}
-                alt="button"
-                className="clock__button-img"
-              />
+              {isClicked ? (
+                <img
+                  src={arrowDown}
+                  alt="button"
+                  className="clock__button-img-down"></img>
+              ) : (
+                <img
+                  src={arrowUp}
+                  alt="button"
+                  className="clock__button-img-up"></img>
+              )}
             </div>
           </button>
         </div>

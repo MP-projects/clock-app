@@ -1,7 +1,7 @@
 .clock__time-wrapper{
     flex-basis: 60%;
     display: flex;
-    width: 1110px;
+    width: 100%;
     flex-direction: column;
     justify-content: flex-end;
 
@@ -9,7 +9,14 @@
   .clock__time-welcome{
     font-size: 3rem;
     width: 800px;
+    display: flex;
+    align-items: center;
 
+  }
+  .clock__time-sun-moon{
+    display: inline;
+    width: auto;
+    margin-right: 10px;
   }
   .clock__time{
     font-size: 20rem;
@@ -28,6 +35,7 @@
   .clock__time-wrapper2 {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
 
   .clock__button-wrapper{
@@ -39,8 +47,8 @@
   }
   
   .clock__button{
-  height: 5.6rem;
-  width: 14.6rem;
+  height: 56px;
+  width: 146px;
   background-color: white;
   border-radius: 50px;
 display: flex;
@@ -64,6 +72,34 @@ align-items: center;
     justify-content: center;
     align-items: center;
   }
-  .clock__button-img{
-  width: auto;
+  .clock__button-img-down{
+  width: 14px;
+  }
+  .clock__button-img-up{
+    width: 40px;
+    }
+
+  @media(max-width:1439px){
+    .clock__button{
+      height: 50px;
+      width: 130px;
+
+
+      }
+      .clock__button-text{
+        font-size: 1.5rem;
+     
+      }
+      .clock__button-img-wrapper{
+        width: 36px;
+        height: 36px;
+        margin-left: 10px;
+      
+      }
+      .clock__button-img-up{
+        width: 36px;
+        }
+        .clock__button-img-down{
+          width: 12px;
+          }
   }

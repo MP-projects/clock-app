@@ -9,7 +9,7 @@ export default function DetailBar({ isClicked }) {
     <div
       className={`detailBar ${isClicked ? "move" : null}`}>
       <div className="detailBar__wrapper">
-        <aside className="detailBar__aside">
+        <aside className="detailBar__aside  detailBar__aside-left">
           <div className="detailBar__row">
             <p className="detailBar__timezone-text text">current timezone</p>
             <p className="detailBar__timezone-city text-api">

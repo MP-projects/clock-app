@@ -49,10 +49,17 @@ button{
   width: 1440px;
   height: 800px;
   position: absolute;
-  background-image: url(../src/assets/desktop/bg-image-daytime.jpg);
+  
   filter: brightness(50%);
   z-index: -1;
   transition: 0.2s;
+}
+.clock__background--day{
+  background-image: url(../src/assets/desktop/bg-image-daytime.jpg);
+}
+.clock__background--night{
+  background-image: url(../src/assets/desktop/bg-image-nighttime.jpg);
+  
 }
 
 .clock__wrapper {
@@ -68,4 +75,60 @@ button{
 .move {
   transform: translate(0, -350px);
 }
+ .height {
+  height: 450px;
+ }
+@media(max-width : 1439px){
+  html{
+    font-size: 8px;
+  }
+  .clock {
+    width: 1200px;
+    height: 700px;
+  
+  }
+  .clock__background{
+    width: 1200px;
+    height: 700px;
 
+  }
+  
+  .clock__wrapper {
+    height: 700px;
+    padding: 60px 110px;
+  }
+  
+  .move {
+    transform: translate(0, -300px);
+  }
+  .height {
+    height: 400px;
+   }
+}
+@media(max-width : 1199px){
+  html{
+    font-size: 8px;
+  }
+  .clock {
+    width: 1024px;
+    height: 600px;
+  
+  }
+  .clock__background{
+    width: 1024px;
+    height: 600px;
+
+  }
+  
+  .clock__wrapper {
+    height: 600px;
+    padding: 60px 80px 40px;
+  }
+  
+  .move {
+    transform: translate(0, -225px);
+  }
+  .height {
+    height: 375px;
+   }
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useFetchTime } from "../hooks/useFetchTime";
 import "./Time.css";
 
@@ -7,7 +7,6 @@ export default function Time({ changeGreetings }) {
 
   let finalHours;
   let finalMinutes;
-  let finalSeconds;
   let greetings;
   let currentTime;
 
@@ -15,7 +14,7 @@ export default function Time({ changeGreetings }) {
     let date = new Date(time.datetime);
     let hours = date.getHours();
     let minutes = date.getMinutes();
-    let seconds = date.getSeconds();
+
     if (hours < 10) {
       finalHours = `0${hours}`;
     } else {
@@ -27,7 +26,6 @@ export default function Time({ changeGreetings }) {
     } else {
       finalMinutes = minutes;
     }
-    finalSeconds = seconds;
 
     if (hours < 12) {
       greetings = "Good Morning";
@@ -38,7 +36,7 @@ export default function Time({ changeGreetings }) {
     if (hours >= 18 && hours < 24) {
       greetings = "Good Evening";
     }
-    currentTime = `${finalHours}:${finalMinutes}`
+    currentTime = `${finalHours}:${finalMinutes}`;
   }
 
   useEffect(() => {
@@ -47,10 +45,5 @@ export default function Time({ changeGreetings }) {
     }
   }, [greetings, changeGreetings]);
 
-
-  return (
-    <>
-      {time && currentTime}
-    </>
-  );
+  return <>{time && currentTime}</>;
 }

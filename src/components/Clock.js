@@ -6,8 +6,8 @@ import sun from "../assets/desktop/icon-sun.svg";
 import moon from "../assets/desktop/icon-moon.svg";
 
 //images
-import arrowUp from "../assets/desktop/icon-arrow-up.svg";
-import arrowDown from "../assets/desktop/icon-arrow-down.svg";
+import arrowUp from "../assets/desktop/angle-up-solid.svg";
+import arrowDown from "../assets/desktop/angle-down-solid.svg";
 
 export default function Clock({ clicked, handleIsClicked, handleIsMorning }) {
   const { data: timezone } = useFetch("https://ipwho.is");
@@ -45,7 +45,7 @@ export default function Clock({ clicked, handleIsClicked, handleIsMorning }) {
   }, [isClicked, handleIsClicked]);
 
   return (
-    <div className="clock__time-wrapper">
+    <section className="clock__time-wrapper">
       <p className="clock__time-welcome">
         <img
           className="clock__time-sun-moon"
@@ -81,6 +81,6 @@ export default function Clock({ clicked, handleIsClicked, handleIsMorning }) {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

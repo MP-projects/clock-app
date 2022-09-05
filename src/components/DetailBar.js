@@ -6,7 +6,7 @@ export default function DetailBar({ isClicked, isMorning }) {
   const { data: detail } = useFetch("https://worldtimeapi.org/api/ip");
 
   return (
-    <div
+    <section
       className={`detailBar 
       ${isMorning ? "detailBar--day" : "detailBar--night"}  
       ${isClicked ? "move" : null}`}>
@@ -40,6 +40,6 @@ export default function DetailBar({ isClicked, isMorning }) {
           </div>
         </aside>
       </div>
-    </div>
+    </section>
   );
 }

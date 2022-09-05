@@ -46,19 +46,19 @@ export default function App() {
 
 
   return (
-    <div className="clock">
+    <main className="clock">
       <div
         className={`clock__background  
         ${changeBackground()}`}></div>
-      <div className={`clock__wrapper ${isClicked ? "move--padding" : null}`}>
+      <section className={`clock__wrapper ${isClicked ? "move--padding" : null}`}>
         <Quote />
         <Clock
           clicked={isClicked}
           handleIsClicked={handleIsClicked}
           handleIsMorning={handleIsMorning}
         />
-      </div>
+      </section>
       <DetailBar isClicked={isClicked} isMorning={isMorning} />
-    </div>
+    </main>
   );
 }

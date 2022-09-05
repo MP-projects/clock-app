@@ -29,7 +29,6 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/MP-projects/clock-app)

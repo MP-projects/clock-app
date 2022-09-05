@@ -29,7 +29,6 @@ Users should be able to:
 
 ![](./screenshot(1).jpg)
 
-![](./screenshot(2).jpg)
 
 ### Links
 
@@ -48,4 +47,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/@MP-projects)

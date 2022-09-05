@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![screenshot](./screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/MP-projects/clock-app)
-- Live Site URL: [Add live site URL here](https://mp-projects.github.io/clock-app/)
+- Solution URL: (https://github.com/MP-projects/clock-app)
+- Live Site URL: (https://mp-projects.github.io/clock-app/)
 
 ## My process
 
@@ -46,4 +46,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/@MP-projects)
+- Frontend Mentor - [@MP-projects](https://www.frontendmentor.io/profile/@MP-projects)
